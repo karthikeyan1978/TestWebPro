@@ -8,14 +8,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
     <head><title>Student Registration Form</title>
-    <script>  
+    <script language="text/javascript">  
 function validateform(){  
 var name=document.myform.name.value;  
- var english=document.myform.name.value; 
- var maths=document.myform.name.value; 
- var tamil=document.myform.name.value; 
- var science=document.myform.name.value; 
- var moral=document.myform.name.value; 
+ var english=document.myform.english.value; 
+ var maths=document.myform.maths.value; 
+ var tamil=document.myform.tamil.value; 
+ var science=document.myform.science.value; 
+ var moral=document.myform.moral.value; 
  var total = english+maths+tamil+science+moral;
  document.myform.total.value=total;
  var average=total/500;
@@ -35,7 +35,7 @@ var name=document.myform.name.value;
  alert("Grade B");
  } else {
  document.myform.grade.value="A";
- alert("Grade A");
+ alert("Grade A congrats");
  }
   
 
