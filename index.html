@@ -8,20 +8,38 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
     <head><title>Student Registration Form</title>
-    <!--<script>  
+    <script>  
 function validateform(){  
 var name=document.myform.name.value;  
-var password=document.myform.password.value;  
+ var english=document.myform.name.value; 
+ var maths=document.myform.name.value; 
+ var tamil=document.myform.name.value; 
+ var science=document.myform.name.value; 
+ var moral=document.myform.name.value; 
+ var total = english+maths+tamil+science+moral;
+ document.myform.total.value=total;
+ var average=total/500;
+ document.myform.average.value=average;
+ 
+ if (average <= 60) {
+ document.myform.grade.value="E";
+ alert("Grade E");
+ } else if (average <= 70) {
+ document.myform.grade.value="D";
+ alert("Grade D");
+ } else if (average <= 80) {
+ document.myform.grade.value="C";
+ alert("Grade C");
+ } else if (average <= 90) {
+ document.myform.grade.value="B";
+ alert("Grade B");
+ } else {
+ document.myform.grade.value="A";
+ alert("Grade A");
+ }
   
-if (name==null || name==""){  
-  alert("Name can't be blank");  
-  return false;  
-}else if(password.length<6){  
-  alert("Password must be at least 6 characters long.");  
-  return false;  
-  }  
-}  
-</script>  -->
+
+</script>
     </head>
     <body id="top">
         <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" > 
@@ -50,18 +68,22 @@ if (name==null || name==""){
                 <tr style="color: red;">
                     <td>Moral:</td><td><input type="text" name="moral" size="45px" />*</td>
                 </tr>
+                <tr>
+                    <td>Total:</td><td><input type="text" name="total" size="45px" /></td>
+                </tr>
+
+                <tr>
+                    <td>Average:</td><td><input type="text" name="average" size="45px" /></td>
+                </tr>
+               <tr>
+                    <td>Grade:</td><td><input type="text" name="grade" size="45px" /></td>
+                </tr>
 
                 <tr>
                     <td>&nbsp;</td>
                     <td><input type="submit" value="Submit"/><input type="reset" value="Reset"/></td><td>&nbsp;</td>
                 </tr>
-                <tr>
-                    <td>Science:</td><td><input type="text" name="science" size="45px" /></td>
-                </tr>
-
-                <tr>
-                    <td>Moral:</td><td><input type="text" name="moral" size="45px" /></td>
-                </tr>
+                
                 
                 
 
